@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Message Generator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffb6c1; /* light pink background */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #000;
+    }
+
+    header {
+      background-color: #add8e6; /* light blue */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    header a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      max-width: 420px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Retro TV container */
+    .tv-frame {
+      background-color: #ffb347; /* warm orange-yellow frame */
+      border-radius: 15px;
+      box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      width: 330px;
+      max-width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    /* Inner blue screen */
+    .screen {
+      background-color: #add8e6;
+      border-radius: 8px;
+      padding: 40px 20px;
+      width: 88%;
+      margin: 0 auto;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .message-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #111;
+    }
+
+    .generate-btn {
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .generate-btn:hover {
+      background-color: #ff85c1;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 1.8rem;
+      }
+
+      .screen {
+        padding: 30px 15px;
+      }
+
+      .message-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💌 Nadskyy & Z's 38th months</h1>
+    <a href="#">reminder about what is important in our relationship </a>
+  </header>
+
+  <main>
+    <div class="title">Selamat Tanggal 3 Princess Cantikuuu 👸❤️💘</div>
+    <div class="subtitle">
+       I'd like you to know that i remember almost every thing that we've discussed after all these month that we went through together, and yes, i still hope for both of us so we can always be:
+    </div>
+
+    <!-- Retro TV Box -->
+    <div class="tv-frame">
+      <div id="message" class="screen message-text">
+        Click the button below babee!
+      </div>
+      <button class="generate-btn" onclick="generateMessage()">Generate Message</button>
+    </div>
+  </main>
+
+  <script>
+    const messages = [
+  "understanding when things don’t go perfectly, especially when it's my fault",
+  "patient with each other’s moods and mistakes <3",
+  "present. through the moment when we’re together",
+  "brave enough to talk about everything, even the hard things",
+  "appreciative to the little things as a symbol of our careness",
+  "excited about the small moments, not just the big ones",
+  "consistent in showing love, even when life gets busy",
+  "open about our dreams and fears, and gentle with both",
+  "playful, because kekonyolan dan cringe is what keeps us strong HIHI",
+  "supportive of each other’s goals and passions",
+  "loving not just in words, but in daily actions",
+  "honest even when honesty feels uncomfortable",
+  "comforting~ a safe place for each other’s hearts",
+  "confident about the future we’re building together.",
+  "kind and loving, even when we disagree.",
+  "grateful... always remembering how lucky we are.",
+  "close, no matter where life takes us. even until we grow old.",
+  "in love not just today, but always. biar selalu excited satu sama lain"
+];
+
+
+    function generateMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").textContent = messages[randomIndex];
+    }
+  </script>
+</body>
+</html>
